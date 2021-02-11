@@ -1,0 +1,38 @@
+{
+  "name": "electron-auto-update-example",
+  "version": "2.0.4",
+  "description": "",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zangkiez/testupdate.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^5.0.12",
+    "electron-builder": "^20.40.2"
+  },
+  "dependencies": {
+    "electron-updater": "^4.0.6",
+    "http-server": "^0.11.1",
+    "electron-log": "^1.3.0"
+  },
+  "build": {
+    "appId": "com.example.ElectronAutoUpdate",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "zangkiez",
+        "repo": "testupdate",
+        "token": "c3e56894bdb84d358af29733b0e14eceb7e94477"
+      }
+    ]
+  }
+}
